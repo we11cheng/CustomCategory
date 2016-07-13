@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2F8943A6D13891FC629609BC91A526FABE88479E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2F8943A6D13891FC629609BC91A526FABE88479E" : 0,
+    "321BCD37CDBCE722C85CF8E92BE81354EFCDE4A1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7BCDC831-1676-484B-AAFA-FB86355AF564",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2F8943A6D13891FC629609BC91A526FABE88479E" : "iOS-getClientInfo\/",
+    "321BCD37CDBCE722C85CF8E92BE81354EFCDE4A1" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ClientTest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ClientTest\/ClientTest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PengfeiWang666\/iOS-getClientInfo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2F8943A6D13891FC629609BC91A526FABE88479E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dianziguan1234\/CustomCategory.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "321BCD37CDBCE722C85CF8E92BE81354EFCDE4A1"
+    }
+  ]
+}
