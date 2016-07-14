@@ -1,0 +1,209 @@
+"Must on the top of this file.
+"execute pathogen#infect()
+call pathogen#infect()
+call pathogen#helptags()
+
+"turn on syntax highlight
+syntax on
+
+"show the line number
+set number
+
+set ruler
+
+set showcmd
+
+"set file encode type
+set encoding=utf-8
+"set fenc=cp936
+set fileencoding=ucs-bom,utf-8,cp936,gb2312,gb18030,big5
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4  
+set expandtab
+
+" ....
+"set transparency=20
+nnoremap <Leader>try :set transparency=20<CR>
+nnoremap <Leader>trn :set transparency=0<CR>
+
+" highlight search
+set hlsearch
+" ....
+
+" highlight cursor
+set cursorline
+set cursorcolumn
+" hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+" hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+" ....
+
+" display status line always
+set laststatus=2
+
+"automaticaly check file type and load relevant settings
+filetype plugin indent on
+filetype on "enable filetype detection
+filetype plugin on "enable filetype specific plugins
+filetype indent on
+filetype indent plugin on "
+
+"set default window size
+set lines=180 columns=190
+
+"code folding
+set foldmethod=indent
+set foldlevel=99
+
+"Options must be set before the line colorscheme kolor.
+let g:kolor_italic=1
+let g:kolor_bold=1
+let g:kolor_underlined=0
+let g:kolor_alternative_matchparen=0
+colorscheme kolor
+"colorscheme pychimp
+"colorscheme blackboard
+"colorscheme lucius
+"set guifont=Consolas:h20
+"set gfn=Consolas:h14
+"set guifont=Apple_Color_Emoji/11/-1/5/50/0/0/0/1/0
+"set guifont=Menlo:h20
+"set guifont=Courier_New:h17
+set guifont=Menlo:h17
+
+"binding shortcut key to open taglist
+map <F1> :TlistToggle<cr>
+
+"binding shortcut key to open NERDTree
+map <F2> :NERDTreeToggle<cr>
+
+map <leader>td <Plug>TaskList
+
+" key binding for rope start
+map <leader>rpo :call RopeOpenProject()
+map <leader>rpk :call RopeCloseProject()
+map <leader>rrn :call RopeRename()
+map <leader>rgd :call RopeGotoDefinition()
+map <leader>rff :call RopeFindFile()
+map <leader>rfo :call RopeFindOccurrences()
+map <leader>rca :call RopeCodeAssist()
+" key binding for rope end
+
+"" settings for nerdtree start
+"" let NERDTreeIgnore = ['setup.py$','\.pyc$'] " this option is an array of regular expression that match the file you want to exclude
+let NERDTreeIgnore = ['\.pyc$'] " this option is an array of regular expression that match the file you want to exclude
+"" settings for nerdtree end
+
+"" settings for jedi start
+"" settings for jedi end
+
+"" settings for taglist start
+let Tlist_Show_One_File=1 "Displaying tags for only one file : 1
+let Tlist_WinWidth=40 " sepcify the width of the vertically split taglist window
+let Tlist_Inc_WinWidth=1 " disable vim window width increased to accomodate the new taglist window
+"let Tlist_Display_Prototype=1 " display the tag prototypes instead of the tag names
+"let Tlist_Display_Tag_Scope=0 " not display the scope of the tags next to the tag names
+"" settings for taglist end
+
+"settings for syntastic start
+"let g:pydiction_location='/home/User/.vim/bundle/pydiction/complete-dict'
+let g:pydiction_location='~/.vim/bundle/pydiction/complete-dict'
+let g:pydiction_menu_height=3
+let g:syntastic_python_checkers=['python']
+"settings for syntastic end
+
+"settings for rope start
+let ropevim_vim_completion=1
+let ropevim_extended_complete=1
+let ropevim_goto_def_newwin='new' " value: '', 'new', 'vnew'
+"settings for rope end
+
+"settings for vim-javascript start
+let g:javascript_enable_domhtmlcss = 1
+"settings for vim-javascript end
+
+"settings for vim-jsx start
+let g:jsx_ext_required = 0
+"settings for vim-jsx end
+
+" add at 2016-04-19 14:23
+" All setting are protected by 'au' ('autocmd') statements. Only files ending
+" in .py or .pyw will trigger the Python settings while files ending in *.c or
+" *.h will trigger the C settings. This makes the file "safe" in terms of only
+" adjusting settings for Python and C files.
+"
+" Only basic settings needed to enforce the style guidelines are set.
+" Some suggested options are listed but commented out at the end of this file.
+
+" Number of spaces that a pre-existing tab is equal to.
+" For the amount of space used for a new tab use shiftwidth.
+au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=8
+
+" What to use for an indent.
+" This will affect Ctrl-T and 'autoindent'.
+" Python: 4 spaces
+" C: tabs (pre-existing files) or 4 spaces (new files)
+au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw set expandtab
+fu Select_c_style()
+  if search('^\t', 'n', 150)
+  set shiftwidth=8
+  set noexpandtab
+  el
+  set shiftwidth=4
+  set expandtab
+  en
+endf
+au BufRead,BufNewFile *.c,*.h call Select_c_style()
+au BufRead,BufNewFile Makefile* set noexpandtab
+
+" Use the below highlight group when displaying bad whitespace is desired.
+highlight BadWhitespace ctermbg=red guibg=red
+
+" Display tabs at the beginning of a line in Python mode as bad.
+au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
+" Make trailing whitespace be flagged as bad.
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" Wrap text after a certain number of characters
+" Python: 79
+" C: 79
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h set textwidth=79
+
+" Turn off settings in 'formatoptions' relating to comment formatting.
+" - c : do not automatically insert the comment leader when wrapping based on
+" 'textwidth'
+" - o : do not insert the comment leader when using 'o' or 'O' from command mode
+" - r : do not insert the comment leader when hitting <Enter> in insert mode
+" Python: not needed
+" C: prevents insertion of '*' at the beginning of every line in a comment
+au BufRead,BufNewFile *.c,*.h set formatoptions-=c formatoptions-=o formatoptions-=r
+
+" Use UNIX (\n) line endings.
+" Only used for new files so as to not force existing files to change their
+" line endings.
+" Python: yes
+" C: yes
+au BufNewFile *.py,*.pyw,*.c,*.h set fileformat=unix
+
+" ----------------------------------------------------------------------------
+" The following section contains suggested settings. While in no way required
+" to meet coding standards, they are helpful.
+
+" Set the default file encoding to UTF-8: ``set encoding=utf-8``
+
+" Puts a marker at the beginning of the file to differentiate between UTF and
+" UCS encoding (WARNING: can trick shells into thinking a text file is actually
+" a binary file when executing the text file): ``set bomb``
+
+" For full syntax highlighting:
+"``let python_highlight_all=1``
+"``syntax on``
+
+" Automatically indent based on file type: ``filetype indent on``
+" Keep indentation level from previous line: ``set autoindent``
+
+" Folding based on indentation: ``set foldmethod=indent``
+" source ~/Documents/SourceCode/Python-2.7.11/Misc/Vim/vimrc
