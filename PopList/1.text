@@ -1,0 +1,19 @@
+// 路径弹窗
+    PopListTableViewController *popList = [[PopListTableViewController alloc] init];
+    self.popList = popList;
+    popList.titleColor = [MOBFColor colorWithRGB:0xa4a4a4];
+    popList.listSource = self.listArray;
+    __weak typeof(self) weakSelf = self;
+    popList.selectedBlock = ^(NSInteger index) {
+        UniChar ch = (int)index + 97;
+        NSString *tmpPath = [NSString stringWithCharacters:&ch length:1];
+        weakSelf.path = [NSString stringWithFormat:@"/demo/%@",tmpPath];
+        
+        [weakSelf.pathBtn setTitle:weakSelf.listArray[index] forState:UIControlStateNormal];
+        
+        [weakSelf openList:weakSelf.openBtn];
+    };
+    popList.view.frame = CGRectZero;
+    
+    [self addChildViewController:popList];
+    [scrollView addSubview:popList.view];
