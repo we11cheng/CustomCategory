@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>infor</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>       绑定银行卡失败存在多种原因，银行卡预留手机号码不正确，银行预留身份证信息为一代身份证，卡内余额为小于1元等多种原因，也可能存在银行支付通道不稳定等情况，具体原因可看帮卡失败后弹框提示。重复操作仍然失败可尝试更换银行卡进行绑定。也可直接拨打400-668-与我们客服人员进行联系。</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>绑定银行卡失败怎么办？</string>
+	</dict>
+	<dict>
+		<key>infor</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>       充值失败大部分情况可能由于填写的银行信息不正确引起，建议您检查后重试。如未能解决，建议您拨打热线（400-668-）与客服人员联系解决此问题。</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>充值失败怎么办？</string>
+	</dict>
+	<dict>
+		<key>infor</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>       进入我的账户，点击“我的投资”后，即可看到查看收益明细。</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>在哪里可以查看收益？</string>
+	</dict>
+	<dict>
+		<key>infor</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>        这种情况可能由以下几种原因导致：银行已扣款，但是可能由于银行系统原因，资金没有同步到第三方支付平台，第三方支付平台没有收到扣款，您的账户余额就不会增加，这种情况您不用担心，银行会再发现问题之后和第三方支付平台对接，第三支付平台收到资金之后，您的账户余额第一时间会增加，如银行没有把钱对接到第三方支付平台，会在1-3个工作日之内把钱退回您的银行卡。第三方支付平台判断您的网络存在钓鱼风险，自动关闭交易，您的钱会在2个工作日之内退回您的银行卡。</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>银行扣钱了账户余额却没有增加？</string>
+	</dict>
+	<dict>
+		<key>infor</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>       您好，我们的业务流程是这样的，工作日（周一到周五）财务每天10:30和15:30集中处理两次，周六15:30处理一次，在处理时间前的申请都会当日处理完毕。周日及节假日的提现申请，顺延至下一工作日处理；所有银行均为T+1到账，具体到账时间以各自银行系统运作为准。</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>提现什么时候到账？</string>
+	</dict>
+	<dict>
+		<key>infor</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>       您好，项目到期当天17:00前完成回款。</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>项目到期什么时候回款？</string>
+	</dict>
+	<dict>
+		<key>infor</key>
+		<array>
+			<dict>
+				<key>answer</key>
+				<string>       您好，加息券是在首页中的砸金蛋中获取，为您的投资项目加息，只能用于首页的推荐标。当您砸到金蛋后，加息券将会自动使用，为您加息。      注：只有领取的当天有效。</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>什么是加息券，怎么使用？</string>
+	</dict>
+</array>
+</plist>
