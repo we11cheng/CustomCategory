@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>assets</key>
+			<array>
+				<dict>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>http://114.215.112.121:10080/MDDTest.ipa</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>full-size-image</string>
+					<key>needs-shine</key>
+					<false/>
+					<key>url</key>
+					<string>http://114.215.112.121:10081/one.png</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>display-image</string>
+					<key>needs-shine</key>
+					<false/>
+					<key>url</key>
+					<string>http://114.215.112.121:10082/two.png</string>
+				</dict>
+			</array>
+			<key>metadata</key>
+			<dict>
+				<key>bundle-identifier</key>
+				<string>com.madengdeng.PietureNews</string>
+				<key>bundle-version</key>
+				<string>1.0</string>
+				<key>kind</key>
+				<string>software</string>
+				<key>subtitle</key>
+				<string>欢迎使用此</string>
+				<key>title</key>
+				<string>美图资讯</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
+
+itemsassetskindsoftware-packageurlipa包URL（必填）kindfull-size-imageneeds-shineurl下载时大图（非必填）kinddisplay-imageneeds-shineurl下载时小图（非必填）metadatabundle-identifierBundleID（必填）bundle-version1.0kindsoftwaresubtitle副标题（非必填）title应用名（必填）
